@@ -1,0 +1,45 @@
+{% extends "news/base.html" %}
+
+{% block shere %}
+
+	<meta property="og:title" content="{{ type }}">
+	<meta property="og:site_name" content="Ushkonir">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/media/imeges/history.jpeg">
+
+{% endblock shere %}
+
+
+{% block content %}
+
+    <div class="pg-collection pt-4 pd_academy">
+            <div class="container">
+                <h1 class="mb-4 text-uppercase text-center project_text3">{{ type }}</h1>
+
+                <div class="row mb-4">
+                    {{ one_row_one|safe }}
+                    {{ one_row_twe|safe }}
+                    {{ one_row_three|safe }}
+                </div>
+                <div class="row mb-4">
+                    {{ twe_row_one|safe }}
+                    {{ twe_row_twe|safe }}
+                    {{ twe_row_three|safe }}
+                </div>
+                <div class="row mb-4">
+                    {{ three_row_one|safe }}
+                    {{ three_row_twe|safe }}
+                    {{ three_row_three|safe }}
+                </div>
+
+                <nav>
+                    <ul class="pagination modal-1">
+                        {{ list|safe }}
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+
+{% endblock content %}

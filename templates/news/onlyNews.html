@@ -1,0 +1,121 @@
+{% extends "news/base.html" %}
+
+{% block shere %}
+
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:site_name" content="Ushkonir">
+    <meta property="og:url" content="http://u-mk.edu.kz/news/4">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="http://u-mk.edu.kz{{ photo }}">
+
+{% endblock shere %}
+
+
+{% block content %}
+
+
+    <section>
+
+
+        <div class="main-content pd_academy">
+
+
+            <div class="pg-article pt-3 pb-5" style="background-image: url(/media/imeges/bg-ornament.png)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="bg-white p-3 elevation-1">
+                                <img src="{{ photo }}" class="img-fluid w-100 mb-3">
+
+                                <div class="pg-article__published mb-1">
+                                    <i class="fas fa-pencil-alt"></i>
+                                    {{ date }}
+                                </div>
+
+                                <h1 class="mb-4">{{ title }}</h1>
+
+                                <div class="pg-article__text222">
+
+                                    <p style="text-align:justify;">{{ text|safe }}</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class=" py-4 py-lg-5 bg-white">
+                <div class="container">
+                    <h2 class="section-header mb-5">
+                        Оқуға ұсынылады </h2>
+                    <div class="row">
+                        <div class="col-lg mb-3">
+                            <div class="article-card aos-init" data-aos="fade-up" data-aos-delay="0"
+                                data-aos-offset="150">
+
+                                <a href="{{ idRecommend.0 }}" class="article-card__img-wrap">
+                                    <div class="article-card__img" style="background-image: url({{ photoRecommend.0 }})">
+                                    </div>
+                                </a>
+
+                                <div class="p-4">
+                                    <div class="article-card__category mb-1">
+                                        {{ thema.0 }}
+                                    </div>
+                                    <a href="{{ idRecommend.0 }}" class="article-card__title">
+                                        {{ titleRecommend.0 }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg mb-3">
+                            <div class="article-card aos-init" data-aos="fade-up" data-aos-delay="150"
+                                data-aos-offset="150">
+
+                                <a href="{{ idRecommend.1 }}" class="article-card__img-wrap">
+                                    <div class="article-card__img"
+                                        style="background-image: url({{ photoRecommend.1 }})">
+                                    </div>
+                                </a>
+
+                                <div class="p-4">
+                                    <div class="article-card__category mb-1">
+                                        {{ thema.0 }}
+                                    </div>
+                                    <a href="{{ idRecommend.1 }}" class="article-card__title">
+                                        {{ titleRecommend.1 }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg mb-3">
+                            <div class="article-card aos-init" data-aos="fade-up" data-aos-delay="300"
+                                data-aos-offset="150">
+
+                                <a href="{{ idRecommend.2 }}" class="article-card__img-wrap">
+                                    <div class="article-card__img" style="background-image: url({{ photoRecommend.2 }})">
+                                    </div>
+                                </a>
+
+                                <div class="p-4">
+                                    <div class="article-card__category mb-1">
+                                        {{ thema.0 }}
+                                    </div>
+                                    <a href="{{ idRecommend.2 }}" class="article-card__title">
+                                        {{ titleRecommend.2 }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+{% endblock content %}

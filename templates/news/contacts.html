@@ -1,0 +1,95 @@
+{% extends "news/base.html" %}
+
+{% block shere %}
+
+	<meta property="og:title" content="Байланыс">
+	<meta property="og:site_name" content="Ushkonir">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/media/imeges/history.jpeg">
+
+{% endblock shere %}
+
+
+{% block content %}
+
+
+    <section>
+        <div class="discuss_projects discuss_projects1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="project_text text-center">
+                            <h3>Байланыс</h3>
+                            <p>"Қазақстан мұсылмандары діни басқармасы" республикалық ислами діни бірлестігінің "Үшқоңыр
+                                медресе колледжі"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact_area section_gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="contact_info">
+                        <div class="info_item">
+                            <i class="fa fa-home"></i>
+                            <h6>Алматы облысы, Жамбыл ауданы, Қарғалы ауылы</h6>
+                            <p>Журунов 60а
+                                <br><strong>Жатақхана:</strong> Алматы облысы, Қарасай батыр ауданы, Үшқоңыр ауылы,
+                                Өтеген батыр 119В
+                            </p>
+                        </div>
+                        <div class="info_item">
+                            <i class="fa fa-phone"></i>
+                            <h6><a href="tel:+77277156799">+7 (727) 715-67-99</a></h6>
+                            <br>
+                        </div>
+                        <div class="info_item">
+                            <i class="fa fa-envelope"></i>
+                            <h6><a href="#">ushkonir@bk.ru </a></h6>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+
+                    <form action="{% url 'contact' %}" class="row contact_form" method="post" id="contactForm222" novalidate="novalidate">
+			{% csrf_token %}
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Аты-жөніңіз">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Почтаңыз">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="subject" name="subject"
+                                    placeholder="Тақырып">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" id="message" rows="1"
+                                    placeholder="Сообщение"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-right btn-send">
+                            <button type="submit" form="contactForm222" value="Submit" class="btn btn-lg btn-primary btn-gradient px-5">
+                                Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="mapBox">
+             
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2738.787754390302!2d76.52000085572027!3d43.18322879539317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7e476b78c0ceb1d5!2zNDPCsDEwJzU5LjYiTiA3NsKwMzEnMTcuNyJF!5e1!3m2!1sru!2skz!4v1648231278442!5m2!1sru!2skz" width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock content %}

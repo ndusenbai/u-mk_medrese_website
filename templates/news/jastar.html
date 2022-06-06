@@ -1,0 +1,151 @@
+{% extends "news/base.html" %}
+
+{% block shere %}
+
+	<meta property="og:title" content="Дарынды студенттер">
+	<meta property="og:site_name" content="Ushkonir">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/media/imeges/history.jpeg">
+
+{% endblock shere %}
+
+
+{% block content %}
+
+    <section>
+        <section id="hero" style="background-image: url('/media/imeges/fonForBook.jpg');">
+            <div class="hero-container" data-aos="fade-up">
+              <h1>Үшқоңыр медресе колледжінің</h1>
+              <h1>дарынды студенттері</h1>
+            </div>
+            <div class="hs-masthead__scrolldown px-3 py-2" id="box1">
+                <a href="#firstBlock" class="header_ssl" id="sclVV">
+                    Келесі <i class="fa fa-chevron-down mx-2"></i>
+                </a>
+            </div>
+          </section>
+          
+    </section>
+
+    <section>
+        <div class="hs-interactive py-5 pd_academy">
+            <div class="container">
+                <h3 class="gs-title mb-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
+                data-aos-offset="150">1-курс студенттері</h3>
+
+                <div class="row justify-content-center">
+
+                    {% for item in one %}
+                    <div class="col-md-3 col-sm-12 col-xl-3 muftiy_block p-2 aos-init aos-animate"  data-aos="fade-up" data-aos-delay="150"
+                    data-aos-offset="150">
+                        <a href="#">
+
+                            <div class="muftiy">
+                                <img src="/media/{{ item.photo }}" class="img-responsive"/>
+                            </div>
+
+                            <div class="mufty-caption">
+                                <span>{{ item.type }}</span>
+                                <span>{{ item.name }}</span>
+                            </div>
+
+                        </a>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="hs-interactive py-5">
+            <div class="container">
+                <h3 class="gs-title mb-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
+                data-aos-offset="150">2-курс студенттері</h3>
+
+                <div class="row justify-content-center">
+
+                    {% for item in twe %}
+                    <div class="col-md-3 col-sm-12 col-xl-3 muftiy_block p-2 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150"
+                    data-aos-offset="150">
+                        <a href="#">
+                            <div class="muftiy">
+                                <img src="/media/{{ item.photo }}" class="img-responsive"/>
+                            </div>
+
+                            <div class="mufty-caption">
+                                <span>{{ item.type }}</span>
+                                <span>{{ item.name }}</span>
+                            </div>
+
+                        </a>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="hs-interactive py-5">
+            <div class="container">
+                <h3 class="gs-title mb-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
+                data-aos-offset="150">3-курс студенттері</h3>
+
+                <div class="row justify-content-center">
+
+                    {% for item in three %}
+                    <div class="col-md-3 col-sm-12 col-xl-3 muftiy_block p-2 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150"
+                    data-aos-offset="150">
+                        <a href="#">
+                            <div class="muftiy">
+                                <img src="/media/{{ item.photo }}" class="img-responsive" alt="" />
+                            </div>
+
+                            <div class="mufty-caption">
+                                <span>{{ item.type }}</span>
+                                <span>{{ item.name }}</span>
+                            </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="hs-interactive py-5">
+            <div class="container">
+                <h3 class="gs-title mb-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
+                data-aos-offset="150">4-курс студенттері</h3>
+
+                <div class="row justify-content-center">
+
+                    {% for item in four %}
+                    <div class="col-md-3 col-sm-12 col-xl-3 muftiy_block p-2 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150"
+                    data-aos-offset="150">
+                        <a href="#">
+                            <div class="muftiy">
+                                <img src="/media/{{ item.photo }}" class="img-responsive" alt="" />
+                            </div>
+
+                            <div class="mufty-caption">
+                                <span>{{ item.type }}</span>
+                                <span>{{ item.name }}</span>
+                            </div>
+
+                        </a>
+                    </div>
+                    {% endfor %}
+
+                 </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

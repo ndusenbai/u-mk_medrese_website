@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Академия</title>
+</head>
+
+
+<body>
+    <header>
+        <div class="header colorized">
+            <div class="header__top px-3 px-lg-4 py-1">
+                <button class="navbar-toggler mr-2 d-lg-none collapsed" type="button" data-toggle="collapse"
+                    data-target="#headerNavbar" aria-controls="headerNavbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="pop"></div>
+                <a class="navbar-brand" href="index.html">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                </a>
+
+                <div class="header__title mx-2">
+                    Международный исламский колледж </div>
+
+                <div class="col"></div>
+
+
+
+
+            </div>
+
+            <nav class="navbar navbar-expand-lg nnn">
+                <div class="navbar-collapse collapse" id="headerNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="academy.html">
+                                Академия
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nnn" href="aboutMedrese.html">
+                                О колледже
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="science.html">
+                                Наука
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blogD.html">
+                                Блог ректора
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="usl.html">
+                                Услуги
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="media.html">
+                                Медиа
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">
+                                Наши контакты
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="col"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <section>
+        <div class="bg-white pt-3 pb-5 pd_academy">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <a href="/person/" class="section-item">
+                            <div class="section-item__img-wrap">
+                                <div class="section-item__img" style="background-image: url({% static 'imeges/1.jpg' %})">
+                                </div>
+                            </div>
+
+                            <div class="section-item__content">
+                                <div class="section-item__title">
+                                    Руководство
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <a href="/aboutMedrese/" class="section-item">
+                            <div class="section-item__img-wrap">
+                                <div class="section-item__img" style="background-image: url({% static 'imeges/2.jpg' %})">
+                                </div>
+                            </div>
+
+                            <div class="section-item__content">
+                                <div class="section-item__title">
+                                    О нас
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <a href="#" class="section-item">
+                            <div class="section-item__img-wrap">
+                                <div class="section-item__img" style="background-image: url({% static 'imeges/3.jpg' %})">
+                                </div>
+                            </div>
+
+                            <div class="section-item__content">
+                                <div class="section-item__title">
+                                    История Академии
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <a href="contacts.html" class="section-item">
+                            <div class="section-item__img-wrap">
+                                <div class="section-item__img" style="background-image: url({% static 'imeges/4.jpg' %})">
+                                </div>
+                            </div>
+
+                            <div class="section-item__content">
+                                <div class="section-item__title">
+                                    Контакты
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <a href="blogD.html" class="section-item">
+                            <div class="section-item__img-wrap">
+                                <div class="section-item__img" style="background-image: url({% static 'imeges/5.jpg' %})">
+                                </div>
+                            </div>
+
+                            <div class="section-item__content">
+                                <div class="section-item__title">
+                                    Блог ректора
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <a href="usl.html" class="section-item">
+                            <div class="section-item__img-wrap">
+                                <div class="section-item__img" style="background-image: url({% static 'imeges/6.jpg' %})">
+                                </div>
+                            </div>
+
+                            <div class="section-item__content">
+                                <div class="section-item__title">
+                                    Услуги
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer__top py-3">
+                <div class="container">
+                    <ul class="footer__socials">
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fa fa-telegram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="footer__mid py-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 col-md-2">
+                            <div class="footer__block mb-4">
+                                <div class="footer__block-label mb-2">
+                                    Академия
+                                </div>
+                                <ul class="footer__block-children">
+                                    <li>
+                                        <a href="#">
+                                            Руководство
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            О нас
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            История Академии
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Контакты
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Блог ректора
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Услуги
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer__block mb-4">
+                                <div class="footer__block-label mb-2">
+                                    О колледже
+                                </div>
+                                <ul class="footer__block-children">
+                                    <li>
+                                        <a href="#">
+                                            О колледже
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            История
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Ushkonyr медресе
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <div class="footer__block mb-4">
+                                <div class="footer__block-label mb-2">
+                                    Наука
+                                </div>
+                                <ul class="footer__block-children">
+                                    <li>
+                                        <a href="#">
+                                            Учебный процесс
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Наши преимущества
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer__block mb-4">
+                                <div class="footer__block-label mb-2">
+                                    Блог ректора
+                                </div>
+                                <ul class="footer__block-children">
+                                    <li>
+                                        <a href="#">
+                                            Приветствие
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Вопрос и ответ
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <div class="footer__block mb-4">
+                                <div class="footer__block-label mb-2">
+                                    Услуги
+                                </div>
+                                <ul class="footer__block-children">
+                                    <li>
+                                        <a href="#">
+                                            Троектория поступления
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Советы
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Образование
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer__block mb-4">
+                                <div class="footer__block-label mb-2">
+                                    Наши контакты
+                                </div>
+                                <ul class="footer__block-children">
+                                    <li>
+                                        <a href="#">
+                                            Контакты
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Связь с колледжом
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Карта колледжа
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer__block mb-4">
+                                <div class="footer__block-label mb-2">
+                                    Медиа
+                                </div>
+                                <ul class="footer__block-children">
+                                    <li>
+                                        <a href="#">
+                                            Новости
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            "Зиё-медиа"
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Статьи
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Зарубежные новости
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <div class="contact_info cwhite">
+                                <div class="info_item">
+                                    <i class="fa fa-home cco"></i>
+                                    <h6>Almaty, Kazakhstan</h6>
+                                    <p>ул. Azat</p>
+                                </div>
+                                <div class="info_item">
+                                    <i class="fa fa-phone cco"></i>
+                                    <h6><a href="#">+7 777 777 77 77</a></h6>
+                                    <p>с Пн до Чт от 9:00 до 6:00</p>
+                                </div>
+                                <div class="info_item">
+                                    <i class="fa fa-envelope cco"></i>
+                                    <h6><a href="#">email@mail.ru</a></h6>
+                                    <p>Все что хотите</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom py-2">
+                <div class="container">
+                    <div class="footer__bottom-content">
+                        <img src="img/logo.png" class="img-fluid footer__logo">
+
+                        <div class="mx-3">
+                            © Международный медресе-колледж Ushkonyr. Kazakhstan, Almaty. 2021
+                        </div>
+
+                        <div class="col"></div>
+
+                        <div>
+                            This template is made with <i class="fa fa-heart"></i> by Bananas Company </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+</html>

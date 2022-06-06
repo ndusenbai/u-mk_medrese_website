@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="kz">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="shortcut icon" href="{% static 'imeges/favicon.ico' %} type="image/x-icon">
+
+    <title>Үшқоңыр медресе колледжі</title>
+
+    <meta property="og:title" content="Үшқоңыр медресе колледжі">
+    <meta property="og:site_name" content="Ushkonir">
+    <meta property="og:url" content="http://u-mk.edu.kz/">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="http://u-mk.edu.kz{% static 'imeges/fon.jpeg' %}">
+
+</head>
+
+<body>
+
+
+    <header id="header">
+        <div class="header colorizable animIng">
+            <div class="header__top px-3 px-lg-4 py-1">
+                <button class="navbar-toggler mr-2 d-lg-none collapsed" type="button" data-toggle="collapse"
+                    data-target="#headerNavbar" aria-controls="headerNavbar" aria-expanded="false"
+                    aria-label="Toggle navigation" id="btnBurg">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="pop"></div>
+                <a class="navbar-brand" href="http://u-mk.edu.kz">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                </a>
+
+                <div class="header__title mx-2">
+                    Үшқоңыр медресе колледжі
+                </div>
+
+                <div class="col"></div>
+
+
+
+                <div class="header__top-nav d-lg-block">
+                    <a href="/contacts/" class="td-none"> Байланыс </a>
+                </div>
+
+
+
+                <div class="d-flex align-items-center mx-2 mx-lg-4">
+
+                    <button type="button" class="btn btn-link td-none" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        <i class="fa fa-edit"></i>
+                        <span class="d-md-inline td-none"></span>
+                        Ұсыныс
+                    </button>
+
+
+
+                </div>
+
+                <ul class="header-locales" >
+                    <li class="">
+                        <a href="https://www.instagram.com/ushqonyr_mk/"><i class="mr-1 fa fa-instagram colorInsta"></i></a>
+                        <a class="disp" href="https://www.instagram.com/ushqonyr_mk/" target="_blank">
+                             Instagram
+                        </a>
+                    </li>
+                    <li class="ml-2">
+                        <a href="https://www.youtube.com/channel/UCP5pOL1YOYxNDbNXeZzv1fw"><i class="mr-1 fa fa-youtube-play colorYouTube"></i></a>
+                        <a class="disp" href="https://www.youtube.com/channel/UCP5pOL1YOYxNDbNXeZzv1fw" target="_blank">
+                             YouTube
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <nav class="navbar navbar-expand-lg nnn">
+                <div class="navbar-collapse collapse" id="headerNavbar">
+                    <ul class="navbar-nav pd_nav_element">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/academy">
+                                Колледж
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/talapker">
+                                Талапкер
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/student">
+                                Студент
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/books">
+                                Кітапхана
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/media">
+                                Медиа
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="col"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center" id="exampleModalLabel">Ұсыныс қалдыру</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form action="{% url 'home' %}" class="row contact_form" method="post" id="contactForm" novalidate="novalidate">
+                        {% csrf_token %} 
+                        <div class="col-md-12">
+                            <h6>Аты-жөніңіз</h6>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" name="name">
+                            </div>
+                            <h6>Почтаңыз</h6>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" name="email">
+                            </div>
+                            <h6>Тақырып</h6>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="subject" name="subject">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <h6>Сообщение</h6>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" id="message" rows="1"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <a href="" class="btn btn-lg btn-primary btn-gradient2 px-5">Жабу</a>
+                    <button type="submit" form="contactForm" value="Submit" class="btn btn-lg btn-primary btn-gradient px-5">Ұсыныс жіберу</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="full-screen" id="full-screen00">
+            <div class="full-screen-body">
+                <div class="hs-masthead__content">
+                    <h2 class="px-6 fontGeneral1">Үшқоңыр медресе колледжі</h2>
+                </div>
+            </div>
+            <video class="video0" poster="{% static 'imeges/fon.jpeg' %}" src="{% static 'media/vid.MOV' %}" autoplay="autoplay" loop="loop"
+                muted="true" playsinline="" preload="auto" webkit-playsinline=""></video>
+        </div>
+      </section>
+
+    <section class="Негізгі мәліметтер">
+        <div class="hs-main-counters py-bottom-ch" id="firstBlock">
+		<h6 class="text-center ssltop"><a href="#firstBlock">Келесі <i class="fa fa-chevron-down mx-2"></i></a></h6>            <div class="container">	
+                <h3 class="gs-title mb-4 text-center">
+                    Негізгі мәліметтер
+                </h3>
+
+                <div class="hs-main-counters__items py-4">
+                    <div class="row justify-content-center">
+                        <div class="col-6 col-md-auto mb-3">
+                            <a class="item hvr-bbox-wrap aos-init aos-animate" href="#" data-aos="flip-left"
+                                data-aos-delay="0">
+                                <div class="hvr-bbox">
+                                    <div class="hvr-bbox__b hvr-bbox__b-tl"></div>
+                                    <div class="hvr-bbox__b hvr-bbox__b-tr"></div>
+                                    <div class="hvr-bbox__b hvr-bbox__b-bl"></div>
+                                    <div class="hvr-bbox__b hvr-bbox__b-br"></div>
+                                </div>
+
+                                <div class="item__img mb-3">
+                                    <img src="{% static 'imeges/student.png' %}" class="img-fluid" />
+                                </div>
+
+                                <div class="item__title mb-1">
+                                    Білім алушылар
+                                </div>
+
+                                <div class="item__text">425</div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-auto mb-3">
+                            <a class="item hvr-bbox-wrap aos-init aos-animate" href="#" data-aos="flip-right"
+                                data-aos-delay="100">
+                                <div class="hvr-bbox">
+                                    <div class="hvr-bbox__b hvr-bbox__b-tl"></div>
+                                    <div class="hvr-bbox__b hvr-bbox__b-tr"></div>
+                                    <div class="hvr-bbox__b hvr-bbox__b-bl"></div>
+                                    <div class="hvr-bbox__b hvr-bbox__b-br"></div>
+                                </div>
+
+                                <div class="item__img mb-3">
+                                    <img src="{% static 'imeges/student2.png' %}" class="img-fluid" />
+                                </div>
+
+                                <div class="item__title mb-1">Мамандықтар</div>
+
+                                <div class="item__text">2</div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-auto mb-3">
+                            <a class="item hvr-bbox-wrap aos-init aos-animate" href="#" data-aos="flip-left"
+                                data-aos-delay="200">
+                                <div class="hvr-bbox">
+                                    <div class="hvr-bbox__b hvr-bbox__b-tl"></div>
+                                    <div class="hvr-bbox__b hvr-bbox__b-tr"></div>
+                                    <div class="hvr-bbox__b hvr-bbox__b-bl"></div>
+                                    <div class="hvr-bbox__b hvr-bbox__b-br"></div>
+                                </div>
+
+                                <div class="item__img mb-3">
+                                    <img src="{% static 'imeges/student3.png' %}" class="img-fluid" />
+                                </div>
+
+                                <div class="item__title mb-1">
+                                    Ұстаздар
+                                </div>
+
+                                <div class="item__text">35</div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-auto mb-3">
+                            <a class="item hvr-bbox-wrap aos-init aos-animate" href="#" data-aos="flip-right"
+                                data-aos-delay="300">
+                                <div class="hvr-bbox">
+                                    <div class="hvr-bbox__b hvr-bbox__b-tl"></div>
+                                    <div class="hvr-bbox__b hvr-bbox__b-tr"></div>
+                                    <div class="hvr-bbox__b hvr-bbox__b-bl"></div>
+                                    <div class="hvr-bbox__b hvr-bbox__b-br"></div>
+                                </div>
+
+                                <div class="item__img mb-3">
+                                    <img src="{% static 'imeges/student4.png' %}" class="img-fluid" />
+                                </div>
+
+                                <div class="item__title mb-1">Кітап қоры</div>
+
+                                <div class="item__text">10361</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="Жаңалықтар">
+        <div class="container py-5">
+            <h3 class="gs-title mb-3 text-center">Жаңалықтар</h3>
+            <h4 class="gs-subtitle mb-5 text-center">
+                Рубрикасындағы соңғы ақпараттар
+            </h4>
+
+            <div class="row mb-4">
+                <div class="col-lg-6 mb-3">
+                    <a href="{{id.0}}" data-aos="fade-right" class="article-imaged aos-init aos-animate">
+                        <div class="article-imaged__img" style="background-image: url({{y.0}})"></div>
+
+                        <div class="article-imaged__content p-4">
+                            <div class="article-imaged__category mb-1">
+                                {{z.0}}
+                            </div>
+                            <div class="article-imaged__title">
+                                {{x.0}}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <div class="article-card aos-init aos-animate" data-aos="fade-up" data-aos-delay="0"
+                        data-aos-offset="150">
+                        <a href="{{id.1}}" class="article-card__img-wrap">
+                            <div class="article-card__img" style="
+                                        background-image: url({{y.1}});
+                                    "></div>
+                        </a>
+
+                        <div class="p-4">
+                            <div class="article-card__category mb-1">
+                                {{z.1}}
+                            </div>
+                            <a href="{{id.1}}" class="article-card__title">
+                                {{x.1}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <div class="article-card aos-init aos-animate" data-aos="fade-up" data-aos-delay="150"
+                        data-aos-offset="150">
+                        <a href="{{id.2}}" class="article-card__img-wrap">
+                            <div class="article-card__img" style="background-image: url({{y.2}})"></div>
+                        </a>
+
+                        <div class="p-4">
+                            <div class="article-card__category mb-1">
+                                {{z.2}}
+                            </div>
+                            <a href="{{id.2}}" class="article-card__title">
+                                {{x.2}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center pt-4">
+                <a href="catalog/news/1" class="btn btn-lg btn-primary btn-gradient px-5">
+                    Барлық жаңалықтар
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="Шетел жаңалықтары">
+        <div class="bg-color2 py-5">
+            <div class="container">
+                <h3 class="gs-title text-white mb-3 text-center">
+                    Шетел жаңалықтары
+                </h3>
+                <h4 class="gs-subtitle text-white mb-5 text-center">
+                    Рубрикасындағы соңғы ақпараттар
+                </h4>
+
+                <div class="row mb-4">
+                    <div class="col-lg-3 mb-3">
+                        <div class="article-card aos-init aos-animate" data-aos="fade-up" data-aos-delay="0"
+                            data-aos-offset="150">
+
+                            <a href="{{ id1.0 }}" class="article-card__img-wrap">
+                                <div class="article-card__img"
+                                    style="
+                                            background-image: url({{y1.0}});"></div>
+                            </a>
+
+                            <div class="article-card__published-date-wrap">
+                                <div class="article-card__published-date">
+                                    <div class="month mb-1">{{year.0}}</div>
+                                    <div class="day">{{moth.0}}</div>
+                                    <div class="day">{{day.0}}</div>
+                                </div>
+                            </div>
+
+                            <div class="p-4">
+                                <div class="article-card__category mb-1">
+                                    Шетел жаңалықтары
+                                </div>
+                                <a href="{{ id1.0 }}" class="article-card__title">
+                                    {{ x1.0}}
+                                </a>
+
+                                <div class="article-card__published-time pt-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <div class="article-card aos-init aos-animate" data-aos="fade-up" data-aos-delay="150"
+                            data-aos-offset="150">
+
+                            <a href="{{id1.1}}" class="article-card__img-wrap">
+                                <div class="article-card__img" style="
+                                            background-image: url({{y1.1}});
+                                        "></div>
+                            </a>
+
+                            <div class="article-card__published-date-wrap">
+                                <div class="article-card__published-date">
+                                    <div class="month mb-1">{{year.1}}</div>
+                                    <div class="day">{{moth.1}}</div>
+                                    <div class="day">{{day.1}}</div>
+                                </div>
+                            </div>
+
+                            <div class="p-4">
+                                <div class="article-card__category mb-1">
+                                    Шетел жаңалықтары
+                                </div>
+                                <a href="{{ id1.1 }}" class="article-card__title">
+                                    {{ x1.1 }}
+                                </a>
+
+                                <div class="article-card__published-time pt-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <div class="article-card aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
+                            data-aos-offset="150">
+
+                            <a href="{{ id1.2 }}" class="article-card__img-wrap">
+                                <div class="article-card__img" style="
+                                            background-image: url({{ y1.2 }})">
+                                </div>
+                            </a>
+
+                            <div class="article-card__published-date-wrap">
+                                <div class="article-card__published-date">
+                                    <div class="month mb-1">{{year.2}}</div>
+                                    <div class="day">{{moth.2}}</div>
+                                    <div class="day">{{day.2}}</div>
+                                </div>
+                            </div>
+
+                            <div class="p-4">
+                                <div class="article-card__category mb-1">
+                                    Шетел жаңалықтары
+                                </div>
+                                <a href="{{ id1.2 }}" class="article-card__title">
+                                    {{ x1.2 }}
+                                </a>
+
+                                <div class="article-card__published-time pt-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <div class="article-card aos-init aos-animate" data-aos="fade-up" data-aos-delay="450"
+                            data-aos-offset="150">
+                            <a href="{{ id1.3 }}" class="article-card__img-wrap">
+                                <div class="article-card__img" style="
+                                            background-image: url({{ y1.3 }});
+                                        "></div>
+                            </a>
+
+                            <div class="article-card__published-date-wrap">
+                                <div class="article-card__published-date">
+                                    <div class="month mb-1">{{year.3}}</div>
+                                    <div class="day">{{moth.3}}</div>
+                                    <div class="day">{{day.3}}</div>
+                                </div>
+                            </div>
+
+                            <div class="p-4">
+                                <div class="article-card__category mb-1">
+                                    Шетел жаңалықтары
+                                </div>
+                                <a href="{{ id1.3 }}" class="article-card__title">
+                                    {{ x1.3 }}
+                                </a>
+
+                                <div class="article-card__published-time pt-2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center pt-4">
+                    <a href="catalog/news_out/1" class="btn btn-lg btn-primary btn-gradient px-5">
+                        Барлық жаңалықтар
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="блог">
+        <div class="hs-interactive py-5">
+            <div class="container">
+                <h3 class="gs-title mb-4">Блог</h3>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-3 col-sm-12 col-xl-3 muftiy_block p-2  aos-init aos-animate" data-aos="fade-up" data-aos-delay="150"
+                            data-aos-offset="150">
+                        <a href="https://www.muftyat.kz/ru/kmdb/blog/">
+                            <div class="muftiy">
+                                <img src="{% static 'imeges/xazret.jpg' %}" class="img-responsive" alt="" />
+                            </div>
+                            <div class="mufty-caption">
+                                <span>Бас мүфти блогы</span>
+                            </div>
+                        </a>
+
+                        <div class="text-center pt-4">
+                            <a href="https://www.muftyat.kz/ru/kmdb/blog/" class="btn btn-lg btn-primary btn-gradient px-5">
+                                Мүфтиятқа сұрақ
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3 col-sm-12 col-xl-3 muftiy_block p-2  aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
+                            data-aos-offset="150">
+                        <a href="#">
+                            <div class="muftiy">
+                                <img src="{% static 'imeges/director_2.jpg' %}" class="img-responsive" alt="" />
+                            </div>
+                            <div class="mufty-caption">
+                                <span>Директор блогы</span>
+                            </div>
+                        </a>
+
+                        <div class="text-center pt-4">
+                            <a href="" class="btn btn-lg btn-primary btn-gradient px-5" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal1">
+                                Директорға сұрақ
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-6 col-md-6 col-sm-12 p-2 aos-init aos-animate" data-aos="fade-up" data-aos-delay="450"
+                            data-aos-offset="150">
+                        <div class="banner-block1222 banner-block12222">
+                            <a href="tel:+77078241100" target="_blank">
+                                <img src="{% static 'imeges/call_c.jpg' %}" class="img-responsive" alt="call центр" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center" id="exampleModalLabel">Директорға сұрақ</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form action="{% url 'academy' %}" class="row contact_form" method="post" id="contactForm" novalidate="novalidate">
+                        {% csrf_token %}
+                        <div class="col-md-12">
+                            <h6>Аты-жөніңіз</h6>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" name="name" >
+                            </div>
+                            <h6>Почтаңыз</h6>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" name="email">
+                            </div>
+                            <h6>Тақырып</h6>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="subject" name="subject">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <h6>Сообщение</h6>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" id="message" rows="1"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="" class="btn btn-lg btn-primary btn-gradient2 px-5">Жабу</a>
+                            <button type="submit" class="btn btn-lg btn-primary btn-gradient px-5">Сұрақты жіберу</button>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="Халықаралық және республикалық әріптестік">
+        <div class="bg-white py-5">
+            <div class="container">
+                <h3 class="gs-title mb-3">
+                    Халықаралық және республикалық әріптестік
+                </h3>
+                <h4 class="gs-subtitle mb-5">
+                    Рубрикасындағы соңғы ақпараттар</h4>
+
+                <div class="row mb-4">
+		{% for el in pop %}
+		   <div class="col-lg-4 mb-3">
+                        <div class="article-simple aos-init aos-animate" data-aos="fade-up" data-aos-delay="0"
+                            data-aos-offset="200">
+
+                            <a href="internationalCooperation/{{el.id}}" class="article-simple__img-wrap mb-4">
+                                <div class="article-simple__img"
+                                    style="background-image: url(media/{{el.photo}})">
+                                </div>
+                            </a>
+
+                            <a href="internationalCooperation/{{el.id}}" class="article-simple__title">
+                                {{el.title}}</a>
+
+                            <div class="article-simple__text my-3">
+                                
+                            </div>
+
+                            <a href="internationalCooperation/{{el.id}}" class="article-simple__read-more">
+                                Толығырақ <i class="fa fa-angle-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+		{% endfor %}
+                </div>
+
+                <div class="text-center pt-4">
+                    <a href="catalog/internationalCooperation/1" class="btn btn-lg btn-primary btn-gradient px-5">
+                        Барлық жаңалықтар </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="Халықаралық және республикалық әріптестер">
+        <div class="hs-partners bg-milk py-5">
+            <div class="container">
+                <h3 class="gs-title mb-5">
+                    Халықаралық және республикалық әріптестер</h3>
+                <div class="owl-carousel sll1">
+                    <div class="hs-partners__item" style="width: 100%; display: inline-block; height: 100%;">
+                        <a href="https://azhar.live" tabindex="-1">
+                            <img src="{% static 'imeges/1loop.png' %}" alt="7" title="7">
+                        </a>
+                    </div>
+                    <div class="hs-partners__item" style="width: 100%; display: inline-block; height: 100%;">
+                        <a href="https://nmu.edu.kz/kk/" tabindex="-1">
+                            <img src="{% static 'imeges/22loop.png' %}" alt="7" title="7">
+                        </a>
+                    </div>
+                    <div class="hs-partners__item" style="width: 100%; display: inline-block; height: 100%;">
+                        <a href="http://www.meb.gov.tr" tabindex="-1">
+                            <img src="{% static 'imeges/3loop.png' %}" alt="7" title="7">
+                        </a>
+                    </div>
+                    <div class="hs-partners__item" style="width: 100%; display: inline-block; height: 100%;">
+                        <a href="https://www.muftyat.kz/kk/" tabindex="-1">
+                            <img src="{% static 'imeges/4loop.png' %}" alt="7" title="7">
+                        </a>
+                    </div>
+                    <div class="hs-partners__item" style="width: 100%; display: inline-block; height: 100%;">
+                        <a href="https://www.gov.kz/memleket/entities/edu?lang=kk" tabindex="-1">
+                            <img src="{% static 'imeges/5loop.png' %}" alt="7" title="7">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="Мақалалар">
+        <div class="bg-white py-5">
+            <div class="container">
+                <h3 class="gs-title mb-3 text-center">Мақалалар</h3>
+                <h4 class="gs-subtitle mb-5 text-center">
+                    Рубрикасындағы соңғы ақпараттар
+                </h4>
+
+                <div class="row mb-4">
+                    <div class="col-lg-4 mb-3">
+                        <div class="article-simple aos-init aos-animate" data-aos="fade-up" data-aos-delay="0"
+                            data-aos-offset="200">
+                            <a href="{{id2.0}}" class="article-simple__img-wrap mb-4">
+                                <div class="article-simple__img" style="
+                                            background-image: url({{y2.0}});
+                                        "></div>
+                            </a>
+
+                            <a href="{{id2.0}}" class="article-simple__title">
+                                {{x2.0}}
+                            </a>
+
+                            <div class="article-simple__text my-3">
+                                {{title2.0}}
+                            </div>
+
+                            <a href="{{id2.0}}" class="article-simple__read-more">
+                                Толығырақ
+                                <i class="fa fa-angle-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-3">
+                        <div class="article-simple aos-init aos-animate" data-aos="fade-up" data-aos-delay="150"
+                            data-aos-offset="200">
+                            <a href="{{id2.1}}" class="article-simple__img-wrap mb-4">
+                                <div class="article-simple__img" style="
+                                            background-image: url({{y2.1}});
+                                        "></div>
+                            </a>
+
+                            <a href="{{id2.1}}" class="article-simple__title">
+                                {{x2.1}}
+                            </a>
+
+                            <div class="article-simple__text my-3">
+                                {{title2.0}}
+                            </div>
+
+                            <a href="{{id2.1}}" class="article-simple__read-more">
+                                Толығырақ
+                                <i class="fa fa-angle-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-3">
+                        <div class="article-simple aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
+                            data-aos-offset="200">
+                            <a href="{{id2.2}}" class="article-simple__img-wrap mb-4">
+                                <div class="article-simple__img" style="
+                                            background-image: url({{y2.2}});
+                                        "></div>
+                            </a>
+
+                            <a href="{{id2.2}}" class="article-simple__title">
+                                {{x2.2}}
+                            </a>
+
+                            <div class="article-simple__text my-3">
+                                {{title2.2}}
+                            </div>
+
+                            <a href="{{id2.2}}" class="article-simple__read-more">
+                                Толығырақ
+                                <i class="fa fa-angle-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center pt-4">
+                    <a href="catalog/stati/1" class="btn btn-lg btn-primary btn-gradient px-5">
+                        Барлық мақалалар
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="Видео">
+        <div class="bg-color2 py-5">
+            <div class="container">
+                <h3 class="gs-title text-white mb-3 text-center">Видео</h3>
+                <h4 class="gs-subtitle text-white mb-5 text-center">
+                    Рубрикасындағы соңғы ақпараттар
+                </h4>
+
+                <div class="row mb-4">
+                    <div class="col-lg-3 mb-3">
+                        <div class="article-card aos-init aos-animate" data-aos="fade-up" data-aos-delay="0"
+                            data-aos-offset="150">
+                            <a href="{{id4.0}}" class="article-card__img-wrap">
+                                <div class="article-card__img" style="
+                                            background-image: url({{y4.0}});
+                                        "></div>
+                            </a>
+
+                            <div class="p-4">
+                                <div class="article-card__category mb-1">
+                                    Видео
+                                </div>
+                                <a href="{{id4.0}}" class="article-card__title">
+                                    {{x4.0}}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <div class="article-card aos-init aos-animate" data-aos="fade-up" data-aos-delay="150"
+                            data-aos-offset="150">
+                            <a href="{{id4.1}}" class="article-card__img-wrap">
+                                <div class="article-card__img" style="
+                                            background-image: url({{y4.1}});
+                                        "></div>
+                            </a>
+
+                            <div class="p-4">
+                                <div class="article-card__category mb-1">
+                                    Видео
+                                </div>
+                                <a href="{{id4.1}}" class="article-card__title">
+                                    {{x4.1}}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <div class="article-card aos-init aos-animate" data-aos="fade-up" data-aos-delay="300"
+                            data-aos-offset="150">
+                            <a href="{{id4.2}}" class="article-card__img-wrap">
+                                <div class="article-card__img" style="
+                                            background-image: url({{y4.2}});
+                                        "></div>
+                            </a>
+
+                            <div class="p-4">
+                                <div class="article-card__category mb-1">
+                                    Видео
+                                </div>
+                                <a href="{{id4.2}}" class="article-card__title">
+                                    {{x4.2}}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <div class="article-card aos-init aos-animate" data-aos="fade-up" data-aos-delay="450"
+                            data-aos-offset="150">
+                            <a href="{{id4.3}}" class="article-card__img-wrap">
+                                <div class="article-card__img" style="
+                                            background-image: url({{y4.3}});
+                                        "></div>
+                            </a>
+
+                            <div class="p-4">
+                                <div class="article-card__category mb-1">
+                                    Видео
+                                </div>
+                                <a href="{{id4.3}}" class="article-card__title">
+                                    {{x4.3}}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center pt-4">
+                    <a href="catalog/video/1" class="btn btn-lg btn-primary btn-gradient px-5">
+                        Барлық видеолар
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="Медресе колледждің ұстаздар құрамы">
+        <div class="hs-useful-sites bg-white py-5">
+            <div class="container">
+                <h3 class="gs-title mb-3">
+                    Медресе колледждің ұстаздар құрамы</h3>
+                <h4 class="gs-subtitle mb-5">
+                </h4>
+                <div class="owl-carousel sll2">
+
+                    {% for item in teacher %}
+                    <div class="d-intline-block" style="width: 100%; display: inline-block;">
+                        <div class="teacher-item teacher-item_center">
+                            <div class="teacher-item__img">
+                                <img src="/media/{{ item.photo }}" class="img-fluid">
+                            </div>
+
+                            <div class="teacher-item__content">
+                                <div class="teacher-item__name">{{ item.fullName }}</div>
+                                <div class="teacher-item__text">{{ item.text|safe }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+               </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="Жастармен жұмыс">
+        <div class="hs-admission bg-milk py-5">
+
+            <div class="container">
+                <h3 class="gs-title mb-3">
+                    Жастармен жұмыс
+                </h3>
+                <h4 class="gs-subtitle mb-5">
+                    Рубрикасындағы соңғы ақпараттар</h4>
+
+                <a href="{{id5.0}}" data-aos="zoom-in" class="admission-article mb-5 aos-init aos-animate">
+                    <div class="admission-article__img-wrap">
+                        <div class="admission-article__img" style="background-image: url({{y5.0}});">
+                        </div>
+                    </div>
+
+                    <div class="admission-article__content">
+                        <div class="admission-article__title">
+                            {{x5.0}}
+                        </div>
+                    </div>
+                </a>
+
+                <div class="row">
+                    <div class="col-lg-6 mb-3">
+                        <div class="article-simple">
+                            <a href="{{id5.1}}" class="article-simple__title">
+                                {{x5.1}}
+                            </a>
+
+                            <div class="article-simple__text my-3">
+                                {{z5.1|safe}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                        <div class="article-simple">
+                            <a href="{{id5.2}}" class="article-simple__title">
+                                {{x5.2}}
+                            </a>
+
+                            <div class="article-simple__text my-3">
+                                {{z5.2|safe}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center pt-4">
+                    <a href="catalog/youthWork/1" class="btn btn-lg btn-primary btn-gradient px-5">
+                        Барлық жаңалықтар</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class=" Пайдалы сайттар">
+        <div class="hs-useful-sites bg-white py-5">
+            <div class="container">
+                <h3 class="gs-title mb-3">
+                    Пайдалы сайттар </h3>
+                <h4 class="gs-subtitle mb-5">
+                </h4>
+                <div class="owl-carousel sll3">
+                    <div class="hs-partners__item" style="width: 50%; display: inline-block; height: 50%;">
+                        <a href="https://azhar.live" tabindex="-1">
+                            <img src="{% static 'imeges/1loop.png' %}" alt="7" title="7">
+                        </a>
+                    </div>
+                    <div class="hs-partners__item" style="width: 50%; display: inline-block; height: 50%;">
+                        <a href="https://nmu.edu.kz/kk/" tabindex="-1">
+                            <img src="{% static 'imeges/22loop.png' %}" alt="7" title="7">
+                        </a>
+                    </div>
+                    <div class="hs-partners__item" style="width: 50%; display: inline-block; height: 50%;">
+                        <a href="http://www.meb.gov.tr" tabindex="-1">
+                            <img src="{% static 'imeges/3loop.png' %}" alt="7" title="7">
+                        </a>
+                    </div>
+                    <div class="hs-partners__item" style="width: 50%; display: inline-block; height: 50%;">
+                        <a href="https://www.muftyat.kz/kk/" tabindex="-1">
+                            <img src="{% static 'imeges/4loop.png' %}" alt="7" title="7">
+                        </a>
+                    </div>
+                    <div class="hs-partners__item" style="width: 50%; display: inline-block; height: 50%;">
+                        <a href="https://www.gov.kz/memleket/entities/edu?lang=kk" tabindex="-1">
+                            <img src="{% static 'imeges/5loop.png' %}" alt="7" title="7">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer__top py-3">
+                <div class="container">
+                    <ul class="footer__socials">
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fa fa-telegram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/ushqonir_mk/" target="_blank">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__mid py-4" style="background-image: url({% static 'imeges/foot-img.png' %});">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 col-md-2">
+                            <div class="footer__block mb-4">
+                                <div class="footer__block-label mb-2">
+                                    Колледж
+                                </div>
+                                <ul class="footer__block-children">
+                                    <li>
+                                        <a href="/catalog/person/"> Әкімшілік </a>
+                                    </li>
+                                    <li>
+                                        <a href="/aboutMedrese/"> Біз туралы </a>
+                                    </li>
+                                    <li>
+                                        <a href="/history/"> Колледж тарихы </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Колледж структурасы </a>
+                                    </li>
+                                    <li>
+                                        <a href="/contacts/"> Байланыс </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Кеңес </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Орталықтар </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer__block mb-4">
+                                <div class="footer__block-label mb-2">
+                                    Талапкер
+                                </div>
+                                <ul class="footer__block-children">
+                                    <li>
+                                        <a href="/talapkerMessange/"> Талапкерге хабарлама </a>
+                                    </li>
+                                    <li>
+                                        <a href="/science/"> Талапкер инструкциясы </a>
+                                    </li>
+                                    <li>
+                                        <a href="/usl/"> Қабылдау жүйесі </a>
+                                    </li>
+                                    <li>
+                                        <a href="/kuj"> Оқуға түсу құжаттары </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Оқылатын пәндер </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <div class="footer__block mb-4">
+                                <div class="footer__block-label mb-2">
+                                    Студент
+                                </div>
+                                <ul class="footer__block-children">
+                                    <li>
+                                        <a href="#"> Дарынды студенттер </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Студенттік өмір </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Студенттік жатахана </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer__block mb-4">
+                                <div class="footer__block-label mb-2">
+                                    Кітапхана
+                                </div>
+                                <ul class="footer__block-children">
+                                    <li>
+                                        <a href="/books/"> Кітаптар </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer__block mb-4">
+                                <div class="footer__block-label mb-2">
+                                    Медиа
+                                </div>
+                                <ul class="footer__block-children">
+                                    <li>
+                                        <a href="/catalog/news/1"> Жаңалықтар </a>
+                                    </li>
+                                    <li>
+                                        <a href="/catalog/video/1"> Видеолар </a>
+                                    </li>
+                                    <li>
+                                        <a href="/catalog/stati/1"> Мақалалар </a>
+                                    </li>
+                                    <li>
+                                        <a href="/catalog/news_out/1"> Шетел жаңалықтары </a>
+                                    </li>
+                                    <li>
+                                        <a href="/catalog/youthWork/1"> Жастармен жұмыс </a>
+                                    </li>
+                                    <li>
+                                        <a href="/catalog/internationalCooperation/1"> Халықаралық әріптестік </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <div class="contact_info cwhite contactFooter">
+                                <div class="info_item">
+                                    <i class="fa fa-home cco"></i>
+                                    <h6>Алматы облысы, Жамбыл ауданы, Қарғалы а.о.</h6>
+                                    <p>Ануарбек Журунов көшесі № 60А үй.
+                                        Корпус №2 Алматы обл.<br> Қарасай ауданы,  Үшқоңыр ауылдық округі, Үшқоңыр
+                                        ауылы,
+                                        <br>Жибек жолы көшесі №164 үй.
+                                    </p>
+                                </div>
+                                <div class="info_item">
+                                    <i class="fa fa-phone cco"></i>
+                                    <h6>
+                                        <a href="#">8(72771)5-67-99 <br> 8(777)-824-11-00 <br>8(747)935-63-46(қыздар
+                                            бөлімі) <br> 8(707)8747044</a>
+                                    </h6>
+                                    <br>
+                                    <!--<p>Дүйсенбі-Жұма: 9:00-18:00</p>-->
+                                </div>
+                                <div class="info_item">
+                                    <i class="fa fa-envelope cco"></i>
+                                    <h6><a href="#">ushkonir@bk.ru</a></h6>
+                                    <!--<p>Почта</p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom py-2">
+                <div class="container">
+                    <div class="footer__bottom-content">
+                        <a href="/admin/" target="_blank">
+                            <img src="{% static 'imeges/logo.png' %}" class="img-fluid footer__logo" />
+                        </a>
+                        <div class="mx-3">
+                            © Үшқоңыр медресе колледжі.
+                            Kazakhstan, Almaty. 2022 - {{count}}
+                        </div>
+
+                        <div class="col"></div>
+
+                        <div class="freeDomFooter">
+                            This template is made with
+                            <i class="fa fa-heart"></i> by <a href="#"> Freedom Company </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="scrollup">
+        <i class="fa fa-chevron-up"></i>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/sdk.js' %}"></script>
+    <script src="{% static 'js/sdk2.js' %}"></script>
+    <script src="{% static 'js/sdk3.js' %}"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.slider').slick({
+
+            });
+        });
+    </script>
+</body>
+
+</html>

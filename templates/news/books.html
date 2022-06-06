@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="{% static 'css/bookscss.css' %}">
+    <meta content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+
+    <meta property="og:title" content="Кітапхана">
+    <meta property="og:site_name" content="Ushkonir">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="/media/imeges/fonForBook.jpg">
+        <title>Кітапхана</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,700;1,300;1,700&amp;family=Crushed&amp;family=Lilita+One&amp;family=Montserrat+Alternates:ital,wght@0,300;0,500;1,300;1,500&amp;family=Nanum+Brush+Script&amp;family=Neucha&amp;family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&amp;family=Open+Sans:ital,wght@0,300;0,700;1,300;1,700&amp;family=PT+Sans+Caption:wght@400;700&amp;family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;family=Poiret+One&amp;family=Roboto+Condensed:ital,wght@0,300;0,700;1,300;1,700&amp;family=Roboto:ital,wght@0,300;0,500;1,300;1,500&amp;family=Ruslan+Display&amp;family=Russo+One&amp;family=Ubuntu+Condensed&amp;family=Ubuntu:ital,wght@0,300;0,500;1,300;1,500&amp;family=Andika&amp;family=Audiowide&amp;family=Bellota:ital,wght@0,300;0,700;1,300;1,700&amp;family=Caveat:wght@400;600&amp;family=Cormorant+SC:wght@300;500&amp;family=Cormorant+Upright:wght@300;500&amp;family=Lobster&amp;family=Nunito:ital,wght@0,300;0,600;1,300;1,600&amp;family=Oswald:wght@300;500&amp;family=Pacifico&amp;family=Play:wght@400;700&amp;family=Prosto+One&amp;family=Raleway:ital,wght@0,300;0,500;1,300;1,500&amp;family=Reggae+One&amp;family=Rubik+Mono+One&amp;family=PT+Sans+Narrow:wght@400;700&amp;family=Montserrat:ital,wght@0,300;0,500;1,300;1,500&amp;family=Alegreya+Sans:ital,wght@0,300;0,500;1,300;1,500&amp;family=Alegreya:ital,wght@0,400;0,500;1,400;1,500&amp;display=swap"
+        rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&amp;display=swap"
+        type="text/css">
+    <link rel="stylesheet" href="/css/ion.rangeSlider.min.css" type="text/css">
+    <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/fa.min.css" type="text/css">
+    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	
+
+</head>
+
+
+<body class="editor_false  lang_ru    copy_bottom not_ie">
+
+    <header>
+        <div class="header colorized">
+            <div class="header__top px-3 px-lg-4 py-1">
+                <button class="navbar-toggler mr-2 d-lg-none collapsed" type="button" data-toggle="collapse"
+                    data-target="#headerNavbar" aria-controls="headerNavbar" aria-expanded="false"
+                    aria-label="Toggle navigation" id="btnBurg">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="pop"></div>
+                <a class="navbar-brand" href="http://u-mk.edu.kz/">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                </a>
+
+                <div class="header__title mx-2">
+                    Үшқоңыр медресе колледжі</div>
+
+                <div class="col"></div>
+
+
+                <div class="header__top-nav d-lg-block">
+                    <a href="/contacts/" class="td-none"> Байланыс </a>
+                </div>
+
+
+
+                <div class="d-flex align-items-center mx-2 mx-lg-4">
+                    
+                    <button type="button" class="btn btn-link td-none" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fa fa-edit"></i>
+                        <span class="d-md-inline td-none"></span>
+                        Ұсыныс
+                    </button>
+                </div>
+
+                <ul class="header-locales" >
+                    <li class="">
+                        <a href="https://www.instagram.com/ushqonyr_mk/"><i class="mr-1 fa fa-instagram colorInsta"></i></a>
+                        <a class="disp" href="https://www.instagram.com/ushqonyr_mk/" target="_blank">
+                             Instagram
+                        </a>
+                    </li>
+                    <li class="ml-2">
+                        <a href="https://www.youtube.com/channel/UCP5pOL1YOYxNDbNXeZzv1fw"><i class="mr-1 fa fa-youtube-play colorYouTube"></i></a>
+                        <a class="disp" href="https://www.youtube.com/channel/UCP5pOL1YOYxNDbNXeZzv1fw" target="_blank">
+                             YouTube
+                        </a>
+                    </li>
+                </ul>
+
+
+
+
+            </div>
+
+            <nav class="navbar navbar-expand-lg nnn">
+                <div class="navbar-collapse collapse" id="headerNavbar">
+                    <ul class="navbar-nav pd_nav_elements">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/academy">
+                                Колледж
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/talapker">
+                                Талапкер
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/student">
+                                Студент
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/books">
+                                Кітапхана
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/media">
+                                Медиа
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="col"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center" id="exampleModalLabel">Ұсыныс қалдыру</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+
+
+                <div class="modal-body">
+                    <form action="{% url 'home' %}" class="row contact_form" method="post" id="contactForm" novalidate="novalidate">
+                        {% csrf_token %}
+                        <div class="col-md-12">
+                            <h6>Аты-жөніңіз</h6>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" name="name">
+                            </div>
+                            <h6>Почтаңыз</h6>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" name="email">
+                            </div>
+                            <h6>Тақырып</h6>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="subject" name="subject">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <h6>Сообщение</h6>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" id="message" rows="1"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-lg btn-primary btn-gradient2 px-5">Жабу</a>
+                    <button type="submit" form="contactForm" value="Submit" class="btn btn-lg btn-primary btn-gradient px-5">Ұсыныс жіберу</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="alerts"></div>
+    <div id="wrapper" class="pd_academy" style="padding-top: 0px;">
+        <div data-autoslide="0" class=" size_450x350  no_fontsize hide_line     section             section155 "
+            data-hcolor="#5d5d5d"
+            style="background-color:#FFFFFF;  background-image:url(/media/imeges/fonForBook.jpg); padding-top:40px; padding-bottom:30px;"
+            data-id="3116940" id="b_3116940"><a name="a_1691350"></a>
+
+
+            <div class="back_dark"
+                style="opacity:0.7; background:linear-gradient(to bottom, #fbfbfb 0% ,#f5f5f5 100% ) "></div>
+            <div class="noise" style="background-image:url(/media/imeges/null.png);"></div>
+            <div class="noise_new " style="background-image:url(/media/imeges/null.png); opacity:0.5;"></div>
+            <div class="section_inner all_border big ">
+                <div class="title text-uppercase"><strong><span style="font-family:montserrat"><span
+                                style="color:#000000"><span style="font-size:48px">Үшқоңыр медресе колледж
+                                    Кітапханасы</span></span></span></strong>
+                    <div>
+                        <div><strong><span style="font-family:montserrat"><span style="color:#000000"><span
+                                            style="font-size:48px"></span></span></span></strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub_title">
+                    <p><br></p>
+                    <p><span style="color:#696969"><span style="font-size:22px"></span></span><span
+                            style="color:#000000;">Үшқоңыр медресе колледжінің кітапханасы оқулықтар және электрондық
+                            кітаптар жинақталған</span><span style="color:#696969"><span
+                                style="font-size:22px"></span></span></p>
+                </div>
+
+                <div class="arr1">
+                    <div class="text-center pt-4">
+                        <a href="/library/" class="btn btn-lg btn-primary btn-gradient px-5">
+                            Барлық кітаптар
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-hcolor="" class="size_700x500 hide_line    section             section1127 "
+            style="background-color:#ffffff;  background-image:url(/media/imeges/null.png); padding-top:60px; padding-bottom:60px;"
+            data-id="3116941" id="b_3116941"><a name="a_1691387"></a>
+
+
+            <div class="noise" style="background-color: #f9f6ef;"></div>
+            <div class="noise_new " style="background-image:url(/media/imeges/null.png); opacity:0.5;"></div>
+            <div class="section_inner all_border    ">
+
+                <div class="arr1  reverse  ">
+
+                    <div data-link="" class="image1 bottom_left   size_700x500 "><img data-lazy="1" alt=""
+                            src="/media/imeges/firstForBook.jpg"></div>
+
+                    <div class="right bottom_left    size_700x500">
+                        <div class="bg_right" style="opacity:1; background: #f2f2f2;"></div>
+                        <div class="title1"><span style="color:#000000"><span style="font-size:32px"><strong><span
+                                            style="font-family:montserrat">ОҚУ ЗАЛЫ</span></strong></span></span></div>
+                        <div class="txt1">
+                            <p><span style="color:#444444">Оқырмандар мен кітапхана қызметкерлеріне
+                                    қолайлы жағдай жасалған орын болып табылады.&nbsp;Заман талабына сай, оқырмандарға
+                                    өркениетті қызмет көрсету.&nbsp;</span></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hide_line  one style_0    section           section132 "
+            style="background-color:#ffffff;  background-image:url(img/null.png); padding-top:40px; padding-bottom:40px;"
+            data-id="3116942" id="b_3116942"><a name="a_1693993"></a>
+
+
+            <div class="noise" style="background-image:url(/img/null.png);"></div>
+            <div class="noise_new " style="background-image:url(/img/null.png); opacity:0.5;"></div>
+            <div class="section_inner  ">
+                <div class="title">
+                    <p style="text-align: left;" class="text-uppercase"><span style="color:#000000;"><span
+                                style="font-size:40px"><span style="font-family: montserrat"><strong>Абонементтік
+                                        бөлім</strong></span></span></span></p>
+                </div>
+                <div class="sub_title">
+                    <p style="text-align: left;"><span style="color:#696969;"><span style="font-size: 22px;">Нарықтық
+                                заман талабына сай кітапхана</span></span></p>
+                    <div><span style="color:#696969;"><span style="font-size: 22px;"><br></span></span></div>
+                </div>
+                <div class="text" style=" ">
+                    <p>Колледж кітапханасы құрамына оқу залдары, абонементтік бөлім, электрондық кітапхана, жатақхана
+                        кітапханасы және арнайы қор кіреді. Колледж кітапханасы бүгінгі таңда колледждің жетекші
+                        құрылымдық бөлімі ретінде оқу – тәрбие үрдістерін қажетті ақпарат құжаттарымен қамтамасыз етуші
+                        білім орталығы болып саналады. Бүгінгі нарықтық заман талабына сай біздің кітапхана да өз
+                        қадірінше оқырман қауымға қызмет жасап келеді.</p>
+                    <p><br></p>
+                </div>
+                <div class="title">
+                    <p style="text-align: left;" class="text-uppercase"><span style="color:#000000;"><span
+                                style="font-size:40px"><span style="font-family: montserrat"><strong>Электронды
+                                        кітапхана</strong></span></span></span></p>
+                </div>
+                <div class="sub_title">
+                    <p style="text-align: left;"><span style="color:#696969;"><span style="font-size: 22px;">Кез келген
+                                жерде қасыңнан табылатын кітапхана</span></span></p>
+                    <div><span style="color:#696969;"><span style="font-size: 22px;"><br></span></span></div>
+                </div>
+                <div class="text" style=" ">
+                    <p>Колледж кітапханасының кітапхана қорын араб және қазақ, орыс, ағылшын тілдеріндегі оқу,
+                        оқу-әдістемелік, ғылыми, көркем әдебиет, мерзімді басылымдар, ақпарат тасмалдаушы көздер,
+                        компакт дискілер, электронды оқулықтар құрайды. Сонымен қатар кітапхана қоры «Қазақстан
+                        Республикасы Жоғарғы оқу орындарының қауымдастығы», «М.Әуезов ат. Әдебиет және өнер институты»,
+                        «Рухани жаңғыру» бағдарламасы аясында жарық көрген Әлемнің алдынғы қатарлы 100 жаңа оқулығы,
+                        «Ұлттық аударма» бюросынан шығарылған оқулықтармен, Колледж ұстаздардың еңбектерімен
+                        толықтырылуда.</p>
+                    <p><br></p>
+                </div>
+            </div>
+        </div>
+
+        <div data-hcolor="#ca2d2a" class="size_700x500 hide_line    section             section1127 "
+            style="background-color:#ffffff;  background-image:url(/media/imeges/null.png); padding-top:40px; padding-bottom:60px;"
+            data-id="3116945" id="b_3116945"><a name="a_1691482"></a>
+
+
+            <div class="noise" style="background-color: #f9f6ef;"></div>
+            <div class="noise_new " style="background-image:url(/media/imeges/null.png); opacity:0.5;"></div>
+            <div class="section_inner all_border    ">
+
+                <div class="arr1 ">
+
+                    <div data-link="" class="image1 top_left_deep   size_700x500 "><img data-lazy="1" alt=""
+                            src="/media/imeges/secondForBook.jpeg"></div>
+
+                    <div class="right top_left_deep    size_700x500">
+                        <div class="bg_right" style="opacity:1; background: #f9f9f9;"></div>
+                        <div class="title1"><span style="color:#000000"><span style="font-size:32px"><strong><span
+                                            style="font-family:montserrat">КІТАПХАНАНЫҢ НЕГІЗГІ
+                                            МАҚСАТТАРЫ</span></strong></span></span></div>
+                        <div class="txt1">
+                            <p><span style="color:#444444">Кітапханаларға берілген жаңа технологияларды кітапхана
+                                    жұмысында кеңінен қолданып, кітапханалардың бүгінгі қоғамның қажетті ақпарат
+                                    орталығы екендігін дәлелдеп, беделін көтеру кітапхананың негізгі мақсаты болып
+                                    табылады.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hide_line  one style_0    section           section132 "
+            style="background-color:#ffffff;  background-image:url(img/null.png); padding-top:0px; padding-bottom:40px;"
+            data-id="3116946" id="b_3116946"><a name="a_1693995"></a>
+
+
+            <div class="noise" style="background-color: #f9f6ef;"></div>
+            <div class="noise_new " style="background-image:url(/media/imeges/null.png); opacity:0.5;"></div>
+            <div class="section_inner  ">
+
+
+                <div class="text" style=" ">
+                    <p>Ақпарат көздерін, әмбебап құжаттардың толық жинағын оқырмандарға әлемдік, ұлттық, мәдени, рухани
+                        құндылықтарды насихаттай отырып, оларды қолжетімді ету жолында жұмыс жасау негізгі міндеттердің
+                        бірі.</p>
+                    <p><br></p>
+                    <p>
+                    <ol>
+                        <li>Оқырмандарды колледж профиліне сәйкес сұраныстарына қарай оқулық, оқу-әдістемелік, ғылыми
+                            еңбектермен, мерзімді басылымдармен, электронды кітаптармен қамтамасыз ету;</li>
+                        <br>
+                        <li>Кітапхана қорын колледждің профиліне және оқырмандардың сұраныстарына сәйкес жинақтау;</li>
+                        <br>
+                        <li>Ақпараттық мәдениет және оқу мәдениеттілігін қалыптастыруға тәрбиелеу. Жаңа ақпараттық
+                            режимде
+                            жұмыс істеу бағдарламаларымен таныстыру;</li>
+                        <br>
+                        <li>Әртүрлі анықтама, кітап тізімдерін, библиографиялық көрсеткіштер жасау, көрмелер және
+                            көпшілік
+                            жұмыстарды ұйымдастыру;</li>
+                    </ol>
+                    </p>
+                    <p><br></p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer__top py-3">
+                <div class="container">
+                    <ul class="footer__socials">
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fa fa-telegram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/ushqonir_mk/" target="_blank">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__mid py-4" style="background-image: url({% static 'imeges/foot-img.png' %});">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 col-md-2">
+                            <div class="footer__block mb-4">
+                                <div class="footer__block-label mb-2">
+                                    Колледж
+                                </div>
+                                <ul class="footer__block-children">
+                                    <li>
+                                        <a href="/catalog/person/"> Әкімшілік </a>
+                                    </li>
+                                    <li>
+                                        <a href="/aboutMedrese/"> Біз туралы </a>
+                                    </li>
+                                    <li>
+                                        <a href="/history/"> Колледж тарихы </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Колледж структурасы </a>
+                                    </li>
+                                    <li>
+                                        <a href="/contacts/"> Байланыс </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Кеңес </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Орталықтар </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer__block mb-4">
+                                <div class="footer__block-label mb-2">
+                                    Талапкер
+                                </div>
+                                <ul class="footer__block-children">
+                                    <li>
+                                        <a href="/talapkerMessange/"> Талапкерге хабарлама </a>
+                                    </li>
+                                    <li>
+                                        <a href="/science/"> Талапкер инструкциясы </a>
+                                    </li>
+                                    <li>
+                                        <a href="/usl/"> Қабылдау жүйесі </a>
+                                    </li>
+                                    <li>
+                                        <a href="/kuj"> Оқуға түсу құжаттары </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Оқылатын пәндер </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <div class="footer__block mb-4">
+                                <div class="footer__block-label mb-2">
+                                    Студент
+                                </div>
+                                <ul class="footer__block-children">
+                                    <li>
+                                        <a href="#"> Дарынды студенттер </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Студенттік өмір </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Студенттік жатахана </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer__block mb-4">
+                                <div class="footer__block-label mb-2">
+                                    Кітапхана
+                                </div>
+                                <ul class="footer__block-children">
+                                    <li>
+                                        <a href="/books/"> Кітаптар </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer__block mb-4">
+                                <div class="footer__block-label mb-2">
+                                    Медиа
+                                </div>
+                                <ul class="footer__block-children">
+                                    <li>
+                                        <a href="/catalog/news/1"> Жаңалықтар </a>
+                                    </li>
+                                    <li>
+                                        <a href="/catalog/video/1"> Видеолар </a>
+                                    </li>
+                                    <li>
+                                        <a href="/catalog/stati/1"> Мақалалар </a>
+                                    </li>
+                                    <li>
+                                        <a href="/catalog/news_out/1"> Шетел жаңалықтары </a>
+                                    </li>
+                                    <li>
+                                        <a href="/catalog/youthWork/1"> Жастармен жұмыс </a>
+                                    </li>
+                                    <li>
+                                        <a href="/catalog/internationalCooperation/1"> Халықаралық әріптестік </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <div class="contact_info cwhite contactFooter">
+                                <div class="info_item">
+                                    <i class="fa fa-home cco"></i>
+                                    <h6>Алматы облысы, Жамбыл ауданы, Қарғалы а.о.</h6>
+                                    <p>Ануарбек Журунов көшесі № 60А үй.
+                                        Корпус №2 Алматы обл.<br> Қарасай ауданы,  Үшқоңыр ауылдық округі, Үшқоңыр
+                                        ауылы,
+                                        <br>Жибек жолы көшесі №164 үй.
+                                    </p>
+                                </div>
+                                <div class="info_item">
+                                    <i class="fa fa-phone cco"></i>
+                                    <h6>
+                                        <a href="#">8(72771)5-67-99 <br> 8(777)-824-11-00 <br>8(747)935-63-46(қыздар
+                                            бөлімі) <br> 8(707)8747044</a>
+                                    </h6>
+                                    <br>
+                                    <!--<p>Дүйсенбі-Жұма: 9:00-18:00</p>-->
+                                </div>
+                                <div class="info_item">
+                                    <i class="fa fa-envelope cco"></i>
+                                    <h6><a href="#">ushkonir@bk.ru</a></h6>
+                                    <!--<p>Почта</p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom py-2">
+                <div class="container">
+                    <div class="footer__bottom-content">
+                        <img src="{% static 'imeges/logo.png' %}" class="img-fluid footer__logo" />
+
+                        <div class="mx-3">
+                            © Үшқоңыр медресе колледжі.
+                            Kazakhstan, Almaty. 2022
+                        </div>
+
+                        <div class="col"></div>
+
+                        <div class="freeDomFooter">
+                            This template is made with
+                            <i class="fa fa-heart"></i> by <a href="#"> Freedom Company </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scrollup">
+        <i class="fa fa-chevron-up"></i>
+    </div>
+
+
+    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<script type="text/javascript" src="https://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+</body>
+
+</html>

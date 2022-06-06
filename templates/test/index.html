@@ -1,0 +1,54 @@
+{% extends "news/base.html" %}
+
+{% block content %}
+
+    <!--<div class="pd_academy">
+        {% for item in row %}
+            <h4>{{item}}</h4>
+
+            {% for item in colum %}
+                <h1>my test page</h1>
+            {% endfor %}
+
+            <h4>{{item}}</h4>
+        {% endfor %}
+    </div>-->
+
+
+    <section>
+        <div class="main-content pd_academy">
+            <div class="container pt-4">
+                <h1 class="mb-4 text-uppercase project_text3 text-center">Әкімшілік</h1>
+
+                <div class="row">
+                    {% for item in  row %}
+                        <div class="col-lg-3 mb-3">
+                            <div class="article-card aos-init aos-animate" data-aos="fade-up" data-aos-delay="0"
+                                data-aos-offset="150">
+
+                                <a href="personals/personal_2.html" class="article-card__img-wrap">
+                                    <div class="article-card__img"
+                                        style="background-image: url(img/personal_2.jpg); background-size: 70%;">
+                                    </div>
+                                </a>
+
+
+                                <div class="p-4">
+                                    <div class="article-card__category mb-1">
+                                        Әкімшілік
+                                    </div>
+                                    <a href="personals/personal_2.html" class="article-card__title">
+                                        Директордың оқу ісі жөніндегі орынбасары
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock content %}
